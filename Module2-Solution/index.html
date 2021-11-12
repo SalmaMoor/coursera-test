@@ -2,10 +2,113 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initialscale=1">
 	<title>Module 2 Solution!</title>
+	<style type="text/css">
+		/*************** Base Style **************/
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		div#container{
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		div#menupart{
+			margin: 1%;
+			border: 1px solid black;
+			background-color: grey;
+		}
+		
+		h1{
+			text-align: center;
+			margin: 40px;
+			font-size: 175%
+		}
+		h2{
+			margin-left: 70%;
+			text-align: center;
+			width: 30%;
+			background-color: red;
+			border: 1px solid black;
+			font-size: 125%
+		}
+		p{
+			
+			background-color: grey;
+			width: 100%;
+			height: 150px;
+			padding: 15px;
+		}
+		.hChicken{
+			background-color:  #d98c8c;
+		}
+		.hBeef{
+			background-color:  #c65353;
+		}
+		.hSushi{
+			background-color:  #ffd480;
+		}
+		/* Simple Responsive Framework */
+		.row{
+			width: 100%;
+		}
+		/************** Large Devices ***************/
+		@media (min-width: 992px){
+			.col-lg-4{
+				float: left;
+				border: 1px solid black;
+			}
+			.col-lg-4{
+				width: 31.33%
+			}
+		}
+		/************* Meduim Devices **************/
+		@media(min-width: 768px) and (max-width: 991px){
+			.col-md-6, .col-md-12{
+				float: left;
+				border: 1px solid black;
+			}
+			.col-md-6{
+				width: 48%;
+			}
+			.col-md-12{
+				width: 98%;
+			}
+			h2.hSushi{
+				width: 15%;
+				margin-left: 85%;
+			}
+		}
+		@media(max-width: 767px){
+			.col-sm-12{
+				float: left;
+				border: 1px solid black;
+				width: 98%;
+			}
+		}
+		
+	</style>
 </head>
 <body>
-	Module 2
-	<p>hi!!! 2</p>
+	<h1>Our Menu</h1>
+	<div id="container">
+		<div class="row">
+			<div id="menupart" class="col-lg-4 col-md-6 col-sm-12">
+				<h2 class="hChicken">Chicken</h2>
+			 	<p class="pChicken">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro commodi amet possimus sit atque, non obcaecati, et repellendus enim perferendis nobis quibusdam vero nulla magni quaerat!</p>
+			 </div>
+			<div  id="menupart" class="col-lg-4 col-md-6 col-sm-12">
+			<h2 class="hBeef">Beef</h2>
+				<p class="bBeef">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro commodi amet possimus sit atque, non obcaecati, et repellendus enim perferendis nobis quibusdam vero nulla magni quaerat!</p>
+			</div>
+			<div  id="menupart" class="col-lg-4 col-md-12 col-sm-12">
+				<h2 class="hSushi">Sushi</h2>
+				<p class="pSushi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro commodi amet possimus sit atque, non obcaecati, et repellendus enim perferendis nobis quibusdam vero nulla magni quaerat!</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
